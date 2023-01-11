@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="">
+      <form action="/updatesearch">
+   <h3>SEARCH EMPLOYEE</h3>
+   
+    <hr>
+ 
+    <label for="empid"><b>Employee Id</b></label>
+    <input type="number" placeholder="Enter Employee ID" name="empid" id="empid" required>
+
+    <button type="submit" class="registerbtn">SEACRH EMPLOYEE</button>
+    <a href="./" style="color:black">BACK TO HOME PAGE</a>
+
+    <br>
+   
+ {{#if umesg}}
+     <h3>Data updated!</h3>
+     {{/if}}
+
+     
+     {{#if mesg2}}
+     <h3>Data Not Found!</h3>
+     {{/if}}
+    </form>
+  </div>
+
+<!--Search form design end-->
+
+{{#if mesg1}}
+       <div class="container">
+       <form action="/updateemployee"  >
+   <h3>UPDATE EMPLOYEE</h3>
+   
+    <hr>
+{{#data}}
+
+    <label for="name"><b>Employee name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" value="{{username}}" id="name" required>
+
+    <label for="empid"><b>Employee Id</b></label>
+    <input type="number" placeholder="Enter Employee ID" name="empid" value="{{empid}}" id="empid" required readonly>
+
+    <label for="empdesignation"><b>Employee Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="empdesignation" value="{{empdesignation}}" id="empdesignation" required>
+
+    <label for="empsalary"><b>Employee Salary</b></label>
+    <input type="number" placeholder="Enter Salary" name="empsalary" value="{{empsalary}}" id="empsalary" required>
+
+    <label for="emplocation"><b>Employee Location</b></label>
+    <input type="text" placeholder="Enter Location" name="emplocation" value="{{emplocation}}" id="emplocation" required>
+
+    <button type="submit" class="registerbtn">UPDATE EMPLOYEE</button>
+{{/data}}
+  
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+    
+</form>
+</div>
+     
+      {{/if}}      
+</body>
+</html>

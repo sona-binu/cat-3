@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <form action="/addemployee"  >
+   <h3>ADD EMPLOYEE</h3>
+   
+    <hr>
+
+    <label for="name"><b>Employee name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" id="name" required>
+
+    <label for="empid"><b>Employee Id</b></label>
+    <input type="number" placeholder="Enter Employee ID" name="empid" id="empid" required>
+
+    <label for="empdesignation"><b>Employee Designation</b></label>
+    <input type="text" placeholder="Enter Degignation" name="empdesignation" id="empdesignation" required>
+
+    <label for="empdept"><b>Employee Department</b></label>
+    <input type="text" placeholder="Enter Department" name="empdept" id="empdept" required>
+
+    <label for="empsalary"><b>Employee Salary</b></label>
+    <input type="number" placeholder="Enter Salary" name="empsalary" id="empsalary" required>
+
+    <label for="emplocation"><b>Employee Location</b></label>
+    <input type="text" placeholder="Enter Location" name="emplocation" id="emplocation" required>
+  <!--
+  <div class="gender_g">
+     <strong>Gender</strong>
+     <input type="radio" name="gender" id="" value="Male"> Male
+     <input type="radio" name="gender" id=""  value="Female">  Female
+  </div> -->
+    <button type="submit" class="registerbtn">ADD EMPLOYEE</button>
+
+  
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+     {{#if mesg}}
+     <h3>Data Inserted</h3>
+     {{/if}}
+
+      {{#if checkmesg}}
+     <h3>Similar Data Present!</h3>
+     {{/if}}
+</form>
+</div>
+</body>
+</html>
